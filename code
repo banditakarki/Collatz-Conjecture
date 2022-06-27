@@ -1,0 +1,33 @@
+num = 27 
+index = 1
+
+final_num <- num
+final_index <- index
+
+while(num != 1){
+  
+  if((num %% 2) != 0){
+  
+  num = (num * 3) + 1
+  index = index + 1
+  
+  final_num <- c(final_num, num)
+  final_index <- c(final_index, index)
+  
+  }else{
+    
+  num = num/2
+  index = index + 1
+  
+  final_num <- c(final_num, num)
+  final_index <- c(final_index, index)
+  
+  }
+  
+}
+
+final_num
+final_index
+
+plot(final_index, final_num, type = "o", col = "red", xlab = "Index", ylab = "Number")
+
