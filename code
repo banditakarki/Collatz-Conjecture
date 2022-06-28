@@ -1,24 +1,44 @@
-num = 27 
+#########################################################
+
+                #PLOTTING THE COLLATZ CONJECTURE
+
+#########################################################
+
+#initialize a number
+num = 27 #27
+
+#initialize an index
 index = 1
 
+#save the number and the index to different variables
 final_num <- num
 final_index <- index
 
+#until the number reaches 1 we keep running the code
 while(num != 1){
   
+  #check if the number is odd or even
   if((num %% 2) != 0){
   
+  #if odd we multiply it by 3 and add 1
   num = (num * 3) + 1
+  
+  #increase the index for each new value of num
   index = index + 1
   
+  #save the new value and new index to vectors
   final_num <- c(final_num, num)
   final_index <- c(final_index, index)
   
   }else{
     
+  #if even divide by 2
   num = num/2
+  
+  #increase the index for each new value of num
   index = index + 1
   
+  #save the new value and new index to vectors
   final_num <- c(final_num, num)
   final_index <- c(final_index, index)
   
@@ -26,8 +46,10 @@ while(num != 1){
   
 }
 
+#print the final number and index
 final_num
 final_index
 
+#plot all the numbers we get and see every time it stops at 1
 plot(final_index, final_num, type = "o", col = "red", xlab = "Index", ylab = "Number")
 
