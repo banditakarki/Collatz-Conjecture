@@ -51,5 +51,5 @@ final_num
 final_index
 
 #plot all the numbers we get and see every time it stops at 1
-plot(final_index, final_num, type = "o", col = "red", xlab = "Index", ylab = "Number")
+plot(final_index, final_num, type = "o", col = "red", xlab = "Index", ylab = "Number", main = "The Collatz Conjecture Plot")
 
